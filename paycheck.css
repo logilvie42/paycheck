@@ -1,0 +1,52 @@
+
+* {  
+    padding: 0;
+    box-sizing: content-box;
+}
+
+html { 
+    background-color: #7cffcb;
+    background-image: linear-gradient(315deg, #7cffcb 0%, #74f2ce 74%);
+     }
+
+body {font-family: 'Bitter', serif;}
+
+h1 { 
+    font-size: 400%;
+    text-align: center;
+}
+
+.footnote { 
+    font-size: 70%; 
+    text-align: center;
+}
+
+.calcForm {
+    display: flex;
+    justify-content: flex-end; 
+    text-align: center;   
+}
+
+input { text-align: center;}
+
+form { 
+    background: mistyrose;
+    box-shadow: 2px 5px 2px rgb(204, 193, 192);
+    border: 5px solid mistyrose; 
+    border-radius: 10%;
+    margin: auto;
+    padding: 4%;
+}
+
+#checkbox { margin-bottom: 10%;}
+
+.resultForm {
+    font-size: 300%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 10%;
+    margin-right: 15%;
+    
+}
+
