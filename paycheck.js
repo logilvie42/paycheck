@@ -72,7 +72,10 @@ function getPaid()
 
   paycheck = taxableIncome - (healthIns + hurtYerself + uncleSam); 
 
-  alert(`You worked ${hoursWorked.toFixed(2)} hours this pay period. Your untaxed income is ${untaxedMoney} American Doll Hairs. You contributed ${retire} US doll hairs to your retirement account this paycheck, leaving $${taxableIncome} for the government to siphon from! Your employer deducted $${hurtYerself.toFixed(2)} in the event that you'd hurt yourself and Uncle Sam took $${uncleSam.toFixed(2)} for Trump's spray tan fund, leaving you with a piddly $${paycheck.toFixed(2)} to spend at your leisure. Ain't life grand?`);
+    document.getElementById("predictPay").innerHTML = `$${paycheck.toFixed(2)}`
+    document.getElementById("hrsWorked").textContent = `You worked ${hoursWorked.toFixed(2)} hours this pay period.`
+    document.getElementById("retire").textContent = `You contributed $${retire} to your retirement account.`
+    document.getElementById("uncleSam").textContent = `Uncle Sam took $${uncleSam.toFixed(2)} for all those potholes they'll never fix`
 
 }
 

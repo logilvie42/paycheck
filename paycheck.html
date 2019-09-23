@@ -37,9 +37,28 @@
             <br>
             <input type="submit" onclick="getPaid()" value="How much will I get paid?"> <input type="reset" value="Lemme try again">
         </form>
+    
+    
+    <div class="resultForm">
+        <div class="payDisplay">
+        <h3 class="result">Your next paycheck will be about...</h3>
+            <h1 id="predictPay"> ... </h1>
+                <button class="breakDownMenu" onclick="breakdown()">Click for a breakdown
+                <div id="hrsWorked"></div> 
+                <div id="retire"> </div>
+                <div id="uncleSam"> </div>
+                </div>
 
-    <div class="resultForm"></div>
+
+    </div>
+
 </div>
+
+
+
+
+
+
 
 <script src="paycheck.js"></script>
 

@@ -16,6 +16,9 @@ h1 {
     text-align: center;
 }
 
+
+
+
 .footnote { 
     font-size: 70%; 
     text-align: center;
@@ -31,7 +34,7 @@ input { text-align: center;}
 
 form { 
     background: mistyrose;
-    box-shadow: 2px 5px 2px rgb(204, 193, 192);
+    box-shadow: 2px 5px 2px midnightblue;
     border: 5px solid mistyrose; 
     border-radius: 10%;
     margin: auto;
@@ -41,12 +44,37 @@ form {
 #checkbox { margin-bottom: 10%;}
 
 .resultForm {
-    font-size: 300%;
+    background: mistyrose;
+    text-align: center;
+    font-size: 100%;
+    border: 10px solid midnightblue;
+    box-shadow: 2px 5px 2px midnightblue;
+    border-radius: 10%;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin-left: 10%;
-    margin-right: 15%;
-    
+    justify-content: flex-end;
+    margin-left: 5%;
+    margin-right: 20%; 
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-block: 5%;
+}
+
+.result { 
+    text-align: center;
+  
+   
+}
+
+.predictPay { 
+    color:goldenrod;
+    text-shadow: 1px 2px 1px midnightblue;
+}
+
+button {  
+    font-family: 'Bitter', serif;
+    background: none;
+    border: none;
+    color: goldenrod;
+    text-decoration: underline;
 }
 
