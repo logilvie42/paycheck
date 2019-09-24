@@ -22,8 +22,7 @@
 
 //declare all variables
 
-let hours1, hours2, totalHours, minutes1, minutes2, totalMinutes,hoursWorked, untaxedMoney, contribution, retire, taxableIncome, checkbox,  uncleSam, hurtYerself, paycheck, healthIns;
-
+var hours1, hours2, minutes1, minutes2, payRate, contribution;
 
 // Hard numbers and percentages
 const taxes = .15;
@@ -47,21 +46,29 @@ function getPaid()
 
   //Add up all the hours into one number which will be rounded to 2 decimal places
 
-  
-  totalHours = hours1 + hours2;
-  totalMinutes = minutes1 + minutes2;
+  function hoursWorked() {
+    let totalHours = hours1 + hours2;
+    let totalMinutes = minutes1 + minutes2;
 
-  hoursWorked = totalHours + (totalMinutes/ 60);
+    return (totalHours + (totalMinutes/ 60));
+  }
+
+  var hoursWorked = (hoursWorked(hours1, hours2, minutes1, minutes2)).toFixed(2);
 
   // Play with all the pre-tax money
-  untaxedMoney = (payRate * hoursWorked).toFixed(2);
-  retire = (untaxedMoney * contribution).toFixed(2);
+  
+  function taxableIncome(){
+    let untaxedMoney = (payRate * hoursWorked).toFixed(2);
+    let retire = (untaxedMoney * contribution).toFixed(2);
+    document.getElementById("retire").innerHTML  = ` $${retire} `;
+    return untaxedMoney - retire;
+  }
 
   // And then play with all the taxable money
-  taxableIncome = untaxedMoney - retire;
+  var taxableIncome = taxableIncome(payRate, hoursWorked, contribution);
 
-  hurtYerself = disability * taxableIncome;
-  uncleSam = taxes * taxableIncome;
+  var hurtYerself = disability * taxableIncome;
+  var uncleSam = taxes * taxableIncome;
 
   // If box is checked, value of healthIns is 39.23; if not, it's el zilcho
   if(document.getElementById('healthIns').checked){
@@ -70,12 +77,15 @@ function getPaid()
     healthIns = 0;
   }
 
-  paycheck = taxableIncome - (healthIns + hurtYerself + uncleSam); 
 
-    document.getElementById("predictPay").innerHTML = `$${paycheck.toFixed(2)}`
-    document.getElementById("hrsWorked").textContent = `You worked ${hoursWorked.toFixed(2)} hours this pay period.`
-    document.getElementById("retire").textContent = `You contributed $${retire} to your retirement account.`
-    document.getElementById("uncleSam").textContent = `Uncle Sam took $${uncleSam.toFixed(2)} for all those potholes they'll never fix`
+  var paycheck = taxableIncome - (healthIns + hurtYerself + uncleSam); 
+
+  // alert(`You worked ${hoursWorked.toFixed(2)} hours this pay period. After all the pretax deductions, you were left with $${taxableIncome} for the government to siphon from! Your employer deducted $${hurtYerself.toFixed(2)} in the event that you'd hurt yourself and Uncle Sam took $${uncleSam.toFixed(2)} for Trump's spray tan fund, leaving you with a piddly $${paycheck.toFixed(2)} to spend at your leisure. Ain't life grand?`);
+
+    document.getElementById("predictPay").innerHTML = ` $${paycheck.toFixed(2)} `;
+    document.getElementById("hrsWorked").innerHTML = ` ${hoursWorked}`;
+   
+    document.getElementById("uncleSam").innerHTML = ` $${uncleSam.toFixed(2)} `;
 
 }
 

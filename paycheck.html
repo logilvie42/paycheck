@@ -35,21 +35,21 @@
                 <input type="radio" name="insurance" id="healthIns" value="39.23"/> Yes
                 <input type="radio" name="insurance" id="noIns" value="0"/> No </p>
             <br>
-            <input type="submit" onclick="getPaid()" value="How much will I get paid?"> <input type="reset" value="Lemme try again">
+            <input type="button" onclick="getPaid()" value="How much will I get paid?"> <input type="reset" value="Lemme try again">
         </form>
     
     
     <div class="resultForm">
         <div class="payDisplay">
-        <h3 class="result">Your next paycheck will be about...</h3>
-            <h1 id="predictPay"> ... </h1>
-                <button class="breakDownMenu" onclick="breakdown()">Click for a breakdown
-                <div id="hrsWorked"></div> 
-                <div id="retire"> </div>
-                <div id="uncleSam"> </div>
-                </div>
-
-
+        <h3 class="result">After working <span id="hrsWorked">___</span> hours, your next paycheck will be about...</h3>
+            <h1 class="result" id="predictPay"> ... </h1>
+            <input type="button" on
+            <div class="result">
+                <p>You'll contribute <span id="retire">___</span> to your retirement account.</p> 
+                <p> About <span id="disability">___</span> will be taken out in the event that</p> 
+                <p>Uncle Sam will take about<span id="uncleSam">___</span> for all those potholes they'll never fix.</p>
+            </div>
+        </div>
     </div>
 
 </div>
