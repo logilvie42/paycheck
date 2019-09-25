@@ -68,6 +68,8 @@ function getPaid()
   var taxableIncome = taxableIncome(payRate, hoursWorked, contribution);
 
   var hurtYerself = disability * taxableIncome;
+  document.getElementById("disability").innerHTML  = ` $${hurtYerself.toFixed(2)} `;
+
   var uncleSam = taxes * taxableIncome;
 
   // If box is checked, value of healthIns is 39.23; if not, it's el zilcho
