@@ -29,8 +29,16 @@ const taxes = .15;
 const disability = .007;
 
 
+function init(){
+  var breakdown = document.getElementById("breakdown");
+  breakdown.style.visibility = "hidden";
+  document.getElementById("predictPay").innerHTML = "...";
+}
+
+
 function getPaid()
 {
+  breakdown.style.visibility = "visible";
   // Retrieve values from weeks 1 and 2 (hours1, hous2, minutes1, minutes2)
   hours1 = Number(document.getElementById("hours1").value);
   hours2 = Number(document.getElementById("hours2").value);
@@ -84,14 +92,14 @@ function getPaid()
 
   // alert(`You worked ${hoursWorked.toFixed(2)} hours this pay period. After all the pretax deductions, you were left with $${taxableIncome} for the government to siphon from! Your employer deducted $${hurtYerself.toFixed(2)} in the event that you'd hurt yourself and Uncle Sam took $${uncleSam.toFixed(2)} for Trump's spray tan fund, leaving you with a piddly $${paycheck.toFixed(2)} to spend at your leisure. Ain't life grand?`);
 
+    
     document.getElementById("predictPay").innerHTML = ` $${paycheck.toFixed(2)} `;
     document.getElementById("hrsWorked").innerHTML = ` ${hoursWorked}`;
    
     document.getElementById("uncleSam").innerHTML = ` $${uncleSam.toFixed(2)} `;
-
 }
 
-
+init();
 
 
 

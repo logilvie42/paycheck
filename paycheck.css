@@ -65,16 +65,14 @@ span,
     padding-block: 5%;
 }
 
-.result { 
-    text-align: center;
-  
-   
-}
+.result { text-align: center; }
 
 .predictPay { 
     color:goldenrod;
     text-shadow: 1px 2px 1px midnightblue;
 }
+
+
 
 button {  
     font-family: 'Bitter', serif;

@@ -31,22 +31,33 @@
                 <p>401k Contribution: <input type="text" id="contribution" value="0" size="2">%*</p>
                 <p class="footnote"> *If none, put zero</p>
             
-                <p>Do you have insurance through the company? 
+                <p>Do you have insurance through Trader Joe's? 
                 <input type="radio" name="insurance" id="healthIns" value="39.23"/> Yes
                 <input type="radio" name="insurance" id="noIns" value="0"/> No </p>
             <br>
-            <input type="button" onclick="getPaid()" value="How much will I get paid?"> <input type="reset" value="Lemme try again">
+            <input type="button" onclick="getPaid()" value="How much will I get paid?"> <input type="reset" onclick="init()" value="Lemme try again">
         </form>
     
     
     <div class="resultForm">
         <div class="payDisplay">
-        <h3 class="result">After working <span id="hrsWorked">___</span> hours, your next paycheck will be about...</h3>
-            <h1 class="result" id="predictPay"> ... </h1>
-            <div class="result">
-                <p>You'll contribute <span id="retire">___</span> to your retirement account.</p> 
-                <p> About <span id="disability">___</span> will be taken out in the event that you hurt yourself at work.</p> 
-                <p>Uncle Sam will take about<span id="uncleSam">___</span> for all those potholes they'll never fix.</p>
+        <h3 class="result">Your next paycheck will be about...</h3>
+            <h1 id="predictPay"> ... </h1>
+        
+            <div id="breakdown">
+
+                <p id="breakdown"> 
+                    You worked <span id="hrsWorked">___</span> hours this pay period.</p>
+                <p id="breakdown"> 
+                    You'll contribute <span id="retire">___</span> to your retirement account.
+                </p> 
+                <p id="breakdown"> 
+                    About <span id="disability">___</span> will be taken out in the event that you hurt yourself at work.
+                </p> 
+                <p id="breakdown">
+                    Uncle Sam will take about<span id="uncleSam">___</span> for all those potholes they'll never fix.
+                </p>
+
             </div>
         </div>
     </div>
